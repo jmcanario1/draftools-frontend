@@ -1,21 +1,42 @@
 import styled from "styled-components";
 
-export const Card = styled.div`
-  background-color: #fff;
-  padding: 20px;
+export const FormContainer = styled.div`
+  display: column;
+  background-color: #ff0000ff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin: 20px auto;
+  width: 100%;
 `
+
+export const IconAndTitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`
+
 export const Title = styled.div`
-  margin-botoom: 16px;
+  margin-bottom: 16px;
   font-size: 1.5rem;
   color: #333;
 `
 
+export const Icon = styled.img`
+  margin: 8px;
+  border-radius: 8px;
+  background: green;
+`
+
 export const Content = styled.div`
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  background: gray;
+
+  form {
+    display: flex;
+    gap: 8px;
+
+    button {
+      align-self: center;
+    }
+  }
 `

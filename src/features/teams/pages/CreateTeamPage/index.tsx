@@ -21,7 +21,7 @@ function CreateTeamPage() {
           <button type="submit">Cadastrar Time</button>
         </form>
       </FormCard>
-      <div className="list-placeholder" style={{ width: "45%", background: "black" }}/>
+      <div className="list-placeholder" style={{ width: "100%", background: "repeating-linear-gradient(45deg, black, black 20px, yellow 20px, yellow 40px)", color: "red", textAlign: "center" }}>Listagem</div>
     </CreateTeamPageContainer>
   )
 }

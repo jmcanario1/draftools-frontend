@@ -11,7 +11,7 @@ export const Bar = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 96px 24px 96px;
+  padding: 8px 96px 8px 96px;
   background-color: #0b2e44;
   color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -27,6 +27,8 @@ export const LogoAndNav = styled.div`
 
 export const LogoImage = styled.img`
   height: 48px;
+  background: white;
+  border-radius: 8px;
 `;
 
 export const Nav = styled.nav`

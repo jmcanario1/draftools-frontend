@@ -1,18 +1,23 @@
 import React, { ReactNode } from "react";
-import { Card, Content, Title } from "./styles";
+import DraftoolsLogo from "../../../assets/draftools.png";
+import { Content, FormContainer, Icon, IconAndTitle, Title } from "./styles";
 
 interface FormCardProps {
+  icon?: ReactNode;
   title?: string;
   children: ReactNode;
 }
 
-const FormCard: React.FC<FormCardProps> = ({ title, children }) => {
+const GeneralForm: React.FC<FormCardProps> = ({ icon, title, children }) => {
   return (
-    <Card>
-      {title && <Title>{title}</Title>}
+    <FormContainer>
+      <IconAndTitle>
+        {icon && <Icon src={DraftoolsLogo} alt="DrafTools" width={72} height={72}/>}
+        {title && <Title>{title}</Title>}
+      </IconAndTitle>
       <Content>{children}</Content>
-    </Card>
+    </FormContainer>
   );
 };
 
-export default FormCard;
+export default GeneralForm;
