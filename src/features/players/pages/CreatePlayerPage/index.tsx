@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import DraftoolsLogo from "../../../../assets/draftools.png";
 import GeneralForm from "../../../../shared/components/GeneralForm";
+import Input from "../../../../shared/components/Input";
 import { CreatePlayerPageContainer } from "./styles";
 
 type CreatePlayerData = {
@@ -23,6 +24,7 @@ function CreatePlayerPage() {
           <input {...register("name")} placeholder="Nome"/>
           <input {...register("pot")} placeholder="Pote"/>
           <input {...register("position")} placeholder="Posição"/>
+          <Input label="Teste" name="Teste" placeholder="Teste"/>
           <button type="submit">Cadastrar Jogador</button>
         </form>
       </GeneralForm>
