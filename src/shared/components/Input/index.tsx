@@ -1,23 +1,20 @@
 import React from "react";
-import { InputContainer, Label, LabelContainer } from "./styles";
+import { Field, InputContainer, Label, LabelContainer } from "./styles";
 
 interface InputProps {
   label: string;
   required?: boolean;
-  name: string;
-  placeholder: string;
+  placeholder?: string;
   width?: string;
 }
 
-const Input: React.FC<InputProps> = ({ label, required=false, name, placeholder, width="300px" }) => {
+const Input: React.FC<InputProps> = ({ label, required=false, placeholder, width="150px" }) => {
   return (
-    <InputContainer>
+    <InputContainer width={width}>
       <LabelContainer>
-        <Label>{label}</Label>
-        {/* { required && (<RequiredTag/>)} */}
+        <Label>{label}{required && "*"}</Label>
       </LabelContainer>
-      <input placeholder="teste"></input>
-      {/* <Field placeholder={placeholder}/> */}
+      <Field placeholder={placeholder}/>
     </InputContainer>
   )
 }
